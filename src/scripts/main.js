@@ -1,7 +1,7 @@
 import { toSellOrNotToSell, usePottery } from "./Pottery-Catalog.js";
 import { makePottery } from "./Pottery-Wheel.js";
 import { firePottery } from "./kiln.js";
-
+import { potteryList } from "./Pottery-List.js";
 // Make 5 pieces of pottery at the wheel
 const mug = makePottery("Mug", 6.3, 6);
 const vase = makePottery("Vase", 7.0, 8);
@@ -28,3 +28,15 @@ toSellOrNotToSell(firedVase)
 toSellOrNotToSell(firedBowl)
 toSellOrNotToSell(firedPlate)
 toSellOrNotToSell(firedCup)
+
+const renderPotteryToDOM = (potteryHTML) =>{
+    const potteryListElement = document.getElementById("potteryList");
+    if (potteryListElement) {
+        potteryListElement.innerHTML = potteryHTML;
+    } else {
+        console.error('Could not find element with id "potteryList"')
+    }
+};
+
+const potteryHTML = potteryList()
+renderPotteryToDOM(potteryHTML);
