@@ -1,8 +1,9 @@
-import { makePottery } from "./PotteryWheel.js";
+import { toSellOrNotToSell, usePottery } from "./Pottery-Catalog.js";
+import { makePottery } from "./Pottery-Wheel.js";
 import { firePottery } from "./kiln.js";
 
 // Make 5 pieces of pottery at the wheel
-const mug = makePottery("Mug", 5.3, 6);
+const mug = makePottery("Mug", 6.3, 6);
 const vase = makePottery("Vase", 7.0, 8);
 const bowl = makePottery("Bowl", 4.2, 5);
 const plate = makePottery("Plate", 9.1, 1.5);
@@ -21,3 +22,9 @@ console.log(firedVase);
 console.log(firedBowl);
 console.log(firedPlate);
 console.log(firedCup);
+
+toSellOrNotToSell(firedMug)
+toSellOrNotToSell(firedVase)
+toSellOrNotToSell(firedBowl)
+toSellOrNotToSell(firedPlate)
+toSellOrNotToSell(firedCup)

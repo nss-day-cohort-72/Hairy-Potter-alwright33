@@ -1,11 +1,11 @@
-export const firePottery = (makePottery, temperature) => {
+export const firePottery = (pottery, temperature) => {
     
-    makePottery.fired = true
+    pottery.fired = true
 
     if (temperature > 2200) {
-        makePottery.cracked = true
+        pottery.cracked = true
     } else {
-        makePottery.cracked = false
+        pottery.cracked = false
     }
-    return makePottery
+    return pottery
 }
