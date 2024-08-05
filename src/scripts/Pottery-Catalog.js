@@ -16,6 +16,6 @@ export const toSellOrNotToSell = (pottery) => {
     
 } 
 export const usePottery = () =>{
-
+    
     return potteryInventory.slice();
 }
